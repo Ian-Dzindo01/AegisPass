@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "AegisPass (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "AegisPass (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
