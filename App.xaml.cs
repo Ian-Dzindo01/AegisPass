@@ -14,6 +14,9 @@ namespace AegisPass
         public App()
         {
             this.InitializeComponent();
+
+            using var db = new AppDbContext();
+            db.Database.EnsureCreated();
         }
 
         /// <summary>
