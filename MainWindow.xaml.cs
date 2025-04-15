@@ -1,4 +1,3 @@
-using AegisPass.Views;
 using Microsoft.UI.Xaml;
 
 namespace AegisPass
@@ -8,17 +7,11 @@ namespace AegisPass
         public MainWindow()
         {
             this.InitializeComponent();
-            MainFrame.Navigate(typeof(LoginPage));
         }
 
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        private void OnButtonClick(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(LoginPage));
-        }
-
-        private void RegisterButton_Click(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Navigate(typeof(RegisterPage));
+            MessageText.Text = "You clicked the button!";
         }
     }
 }

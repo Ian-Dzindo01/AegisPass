@@ -1,0 +1,15 @@
+<Page
+    x:Class="AegisPass.Views.LandingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AegisPass.Views"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="30">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="20">
+            <TextBlock Text="Welcome to AegisPass" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBlock Text="Your passwords, encrypted and safe." FontSize="18" HorizontalAlignment="Center"/>
+            <Button Content="Open Vault" Width="200" Click="OpenVault_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

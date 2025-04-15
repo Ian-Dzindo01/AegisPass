@@ -1,20 +1,18 @@
-﻿using AegisPass.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.IO;
 
 public class AppDbContext : DbContext
 {
-    public DbSet<User> Users => Set<User>();
-
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
-        string dbPath = Path.Combine(
+        string appFolder = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-            "AegisPass",
-            "users.db");
+            "AegisPass");
 
-        Directory.CreateDirectory(Path.GetDirectoryName(dbPath)!);
+        Directory.CreateDirectory(appFolder);
+
+        string dbPath = Path.Combine(appFolder, "users.db");
 
         options.UseSqlite($"Data Source={dbPath}");
     }
